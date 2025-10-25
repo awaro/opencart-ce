@@ -1,8 +1,14 @@
 {{ header }}
 <div id="product-category" class="container">
   <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+   {% for breadcrumb in breadcrumbs %}
+    <li>
+      {% if loop.last %}
+        {{ breadcrumb.text }}
+      {% else %}
+        <a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+      {% endif %}
+    </li>
     {% endfor %}
   </ul>
   <div class="row">{{ column_left }}
