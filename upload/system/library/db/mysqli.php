@@ -1,7 +1,7 @@
 <?php
 namespace DB;
 
-require_once(__DIR__ . '/mysqli_query.php');
+require_once(DIR_SYSTEM . 'library/db/mysqli_query.php');
 
 class MySQLi {
 	private $connection;

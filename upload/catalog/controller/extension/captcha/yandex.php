@@ -15,7 +15,7 @@ class ControllerExtensionCaptchaYandex extends Controller {
 
 		$data['site_key'] = $this->config->get('captcha_yandex_key');
 
-		$data['route'] = isset($this->request->get['route']) ? $this->request->get['route'] : 'common/home'; 
+		$data['route'] = isset($this->request->get['route']) ? $this->request->get['route'] : 'common/home';
 
 		return $this->load->view('extension/captcha/yandex', $data);
     }
@@ -34,7 +34,7 @@ class ControllerExtensionCaptchaYandex extends Controller {
 				"ip"      => $this->request->server['REMOTE_ADDR'] ?? ''
 			]);
 			
-			$ch = curl_init("https://captcha-api.yandex.ru/validate?$args");
+			$ch = curl_init("https://smartcaptcha.cloud.yandex.ru/validate?$args");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 			curl_setopt($ch, CURLOPT_TIMEOUT, 1);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);

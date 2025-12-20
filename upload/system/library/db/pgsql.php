@@ -1,7 +1,7 @@
 <?php
 namespace DB;
 
-require_once(__DIR__ . '/pgsql_query.php');
+require_once(DIR_SYSTEM . 'library/db/pgsql_query.php');
 
 final class PgSQL {
 	private $link;

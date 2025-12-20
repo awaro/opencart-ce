@@ -1,7 +1,7 @@
 <?php
 namespace DB;
 
-require_once(__DIR__ . '/pdo_query.php');
+require_once(DIR_SYSTEM . 'library/db/pdo_query.php');
 
 final class PDO {
 	private $connection = null;
